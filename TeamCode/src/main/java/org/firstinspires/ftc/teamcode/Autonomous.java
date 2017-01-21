@@ -10,14 +10,14 @@ import java.util.HashMap;
  * Created by student on 11/24/2016.
  */
 
-@com.qualcomm.robotcore.eventloop.opmode.Autonomous(name="Autonomous")
-public class Autonomous extends LinearOpMode {
+public abstract class Autonomous extends LinearOpMode {
 
-    private HardwareK9bot robot = new HardwareK9bot();
+    protected HardwareK9bot robot = new HardwareK9bot();
 
     private int delay;
     private static int TICKS_PER_REVOLUTION = 1440;
-    private static double TICKS_PER_INCH = TICKS_PER_REVOLUTION / (Math.PI * 4);
+    private static double GEAR_RATIO = 3.0;
+    private static double TICKS_PER_INCH = TICKS_PER_REVOLUTION * GEAR_RATIO / (Math.PI * 4);
 
     @Override
     public void runOpMode() throws InterruptedException {
@@ -25,10 +25,12 @@ public class Autonomous extends LinearOpMode {
 
         waitForStart();
 
-        move(10, 0.5);
+        runPath();
     }
 
-    public void move(int distance, double power) {
+    abstract protected void runPath();
+
+    protected void move(int distance, double power) {
         robot.leftMotor.setMode(DcMotor.RunMode.STOP_AND_RESET_ENCODER);
         robot.rightMotor.setMode(DcMotor.RunMode.STOP_AND_RESET_ENCODER);
 
