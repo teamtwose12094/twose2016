@@ -27,6 +27,7 @@ public class HardwarePushbot
     public DcMotor  leftMotor   = null;
     public DcMotor  rightMotor  = null;
     public DcMotor  armMotor    = null;
+    public DcMotor  fingerMotor = null;
     public Servo    leftClaw    = null;
     public Servo    rightClaw   = null;
 
@@ -54,6 +55,7 @@ public class HardwarePushbot
         armMotor    = hwMap.dcMotor.get("left_arm");
         leftMotor.setDirection(DcMotor.Direction.FORWARD); // Set to REVERSE if using AndyMark motors
         rightMotor.setDirection(DcMotor.Direction.REVERSE);// Set to FORWARD if using AndyMark motors
+        fingerMotor = hwMap.dcMotor.get("chicken_fingers");
 
         // Set all motors to zero power
         leftMotor.setPower(0);

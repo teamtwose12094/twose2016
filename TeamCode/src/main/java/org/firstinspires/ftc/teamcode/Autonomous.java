@@ -84,4 +84,28 @@ public abstract class Autonomous extends LinearOpMode {
         robot.leftMotor.setPower(0);
         robot.rightMotor.setPower(0);
     }
+    protected void spin (int duration, int power){
+        robot.fingerMotor.setMode(DcMotor.RunMode.STOP_AND_RESET_ENCODER);
+
+
+
+
+        //gives power to motors
+        robot.fingerMotor.setPower(power);
+
+        idle();
+
+
+
+        //keep going until distance is met
+        //THIS IS WHERE WE TRIED TO MAKE THE TIMER!!!
+       /* while(int i = 0; i < duration && opModeIsActive(); i++ ){
+            sleep(1);
+        }
+        */
+
+        //turn the motors off
+        robot.fingerMotor.setPower(0);
+spin(2000, 75);
+    }
 }

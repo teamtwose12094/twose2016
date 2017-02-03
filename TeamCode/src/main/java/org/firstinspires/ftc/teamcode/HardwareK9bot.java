@@ -28,6 +28,7 @@ public class HardwareK9bot
     /* Public OpMode members. */
     public DcMotor  leftMotor   = null;
     public DcMotor  rightMotor  = null;
+    public DcMotor  fingerMotor = null;
     public Servo    arm         = null;
     public Servo    claw        = null;
 
@@ -54,6 +55,7 @@ public class HardwareK9bot
         // Define and Initialize Motors
         leftMotor   = hwMap.dcMotor.get("left_drive");
         rightMotor  = hwMap.dcMotor.get("right_drive");
+        fingerMotor = hwMap.dcMotor.get("chicken_fingers");
         leftMotor.setDirection(DcMotor.Direction.REVERSE);
 
         // Set all motors to zero power
