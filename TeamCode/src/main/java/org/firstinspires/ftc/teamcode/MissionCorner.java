@@ -14,6 +14,7 @@ public class MissionCorner extends Autonomous {
         move(24, 0.5);
         pivot(45, 0.5);
         move(48, 0.5);
+        move(10, 0.5);
     }
 
 }
