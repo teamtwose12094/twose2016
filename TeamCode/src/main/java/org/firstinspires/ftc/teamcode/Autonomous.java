@@ -85,7 +85,7 @@ public abstract class Autonomous extends LinearOpMode {
         robot.rightMotor.setPower(0);
     }
 
-    void spin (int duration, int power){
+    void spin (int duration, double power){
         robot.fingerMotor.setMode(DcMotor.RunMode.STOP_AND_RESET_ENCODER);
 
         //gives power to motors
