@@ -6,8 +6,8 @@ import com.qualcomm.robotcore.hardware.HardwareMap;
  * Created by student on 1/20/2017.
  */
 
-@com.qualcomm.robotcore.eventloop.opmode.Autonomous(name = "MissionCorner", group = "Autonomous")
-public class MissionCorner extends Autonomous {
+@com.qualcomm.robotcore.eventloop.opmode.Autonomous(name = "MissionCornerBlue", group = "Autonomous")
+public class MissionCornerBlue extends Autonomous {
     @Override
     public void runPath() {
         move(48, 0.5);
@@ -20,4 +20,5 @@ public class MissionCorner extends Autonomous {
     }
 
 }
+
 
