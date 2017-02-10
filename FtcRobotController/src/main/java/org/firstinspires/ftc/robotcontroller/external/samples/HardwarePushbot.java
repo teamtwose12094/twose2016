@@ -61,6 +61,7 @@ public class HardwarePushbot
         leftMotor.setPower(0);
         rightMotor.setPower(0);
         armMotor.setPower(0);
+        fingerMotor.setPower(0);
 
         // Set all motors to run without encoders.
         // May want to use RUN_USING_ENCODERS if encoders are installed.
