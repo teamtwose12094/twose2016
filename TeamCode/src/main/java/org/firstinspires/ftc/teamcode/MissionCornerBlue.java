@@ -10,7 +10,7 @@ import com.qualcomm.robotcore.hardware.HardwareMap;
 public class MissionCornerBlue extends Autonomous {
     @Override
     public void runPath() {
-        sleep(7000);
+        sleep(7500);
         move(20, 0.7);
         pivot(110, 0.7);
         move(15, 0.7);
