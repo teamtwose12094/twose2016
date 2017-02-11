@@ -7,7 +7,7 @@ package org.firstinspires.ftc.teamcode;
 public class MissionSabotageBlue extends Autonomous {
     @Override
     protected void runPath() {
-        move(75,0.5);
+        move(30,0.5);
         move(10, 0.2);
         pivot(-90, 0.5);
     }

@@ -7,6 +7,6 @@ package org.firstinspires.ftc.teamcode;
 public class MissionCentre extends Autonomous {
     @Override
     protected void runPath() {
-        move(85,0.5);
+        move(40,0.5);
     }
 }
