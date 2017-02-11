@@ -8,7 +8,7 @@ package org.firstinspires.ftc.teamcode;
 public class MissionCornerRed extends Autonomous {
     @Override
     public void runPath() {
-        move(20, 0.5);
+        move(15, 0.5);
         pivot(-90, 0.5);
         move(8, 0.5);
         pivot(-45, 0.5);

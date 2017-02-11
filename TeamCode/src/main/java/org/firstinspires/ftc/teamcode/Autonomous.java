@@ -59,14 +59,16 @@ public abstract class Autonomous extends LinearOpMode {
 
     protected void pivot(int angle, double power) {
 
-        double d = Math.toRadians(angle) * WHEEL_BASE;
+        double d = Math.toRadians(angle) * WHEEL_BASE/2;
+        d *= .5;
+        d += 0.003 * (double)angle;
 
         robot.leftMotor.setMode(DcMotor.RunMode.STOP_AND_RESET_ENCODER);
         robot.rightMotor.setMode(DcMotor.RunMode.STOP_AND_RESET_ENCODER);
 
         //gives power to motors
-        robot.leftMotor.setPower(Math.signum(angle) * power);
-        robot.rightMotor.setPower(-Math.signum(angle) * power);
+        robot.leftMotor.setPower(-Math.signum(angle) * power);
+        robot.rightMotor.setPower(Math.signum(angle) * power);
 
         idle();
 
@@ -74,9 +76,9 @@ public abstract class Autonomous extends LinearOpMode {
         robot.rightMotor.setMode(DcMotor.RunMode.RUN_USING_ENCODER);
 
         //keep going until distance is met
-        while( (Math.abs(robot.leftMotor.getCurrentPosition()) < d * TICKS_PER_INCH) && opModeIsActive() ){
-
-            telemetry.addData("thing", robot.leftMotor.getCurrentPosition());
+        while( (Math.abs(robot.leftMotor.getCurrentPosition()) < Math.abs(d) * TICKS_PER_INCH) && opModeIsActive() ){
+            telemetry.addData("target",d*TICKS_PER_INCH);
+            telemetry.addData("current", robot.leftMotor.getCurrentPosition());
             telemetry.update();
             idle();
         }
