@@ -12,11 +12,11 @@ public class MissionCornerBlue extends Autonomous {
     public void runPath() {
         sleep(7000);
         move(20, 0.7);
-        pivot(80, 0.7);
+        pivot(110, 0.7);
         move(15, 0.7);
-//        move(24, 0.7);
-//        move(10, 0.7);
-        spin(3000, 0.7);
+        move(10, 0.7);
+        spin(3000, -0.7);
+        move(4, 0.7);
     }
 
 }

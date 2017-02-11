@@ -92,10 +92,11 @@ public abstract class Autonomous extends LinearOpMode {
 
         //gives power to motors
         robot.fingerMotor.setPower(power);
-
+        robot.fingerMotor.setMode(DcMotor.RunMode.RUN_WITHOUT_ENCODER);
         sleep(duration);
 
         //turn the motors off
         robot.fingerMotor.setPower(0);
+        robot.fingerMotor.setMode(DcMotor.RunMode.STOP_AND_RESET_ENCODER);
     }
 }
