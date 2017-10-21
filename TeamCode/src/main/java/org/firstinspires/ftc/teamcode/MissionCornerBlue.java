@@ -5,7 +5,7 @@ import com.qualcomm.robotcore.hardware.HardwareMap;
 /**
  * Created by student on 1/20/2017.
  */
-
+// test
 @com.qualcomm.robotcore.eventloop.opmode.Autonomous(name = "MissionCornerBlue", group = "Autonomous")
 public class MissionCornerBlue extends Autonomous {
     @Override
