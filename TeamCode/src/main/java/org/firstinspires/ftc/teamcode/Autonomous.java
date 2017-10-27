@@ -99,4 +99,8 @@ public abstract class Autonomous extends LinearOpMode {
         robot.fingerMotor.setPower(0);
         robot.fingerMotor.setMode(DcMotor.RunMode.STOP_AND_RESET_ENCODER);
     }
+
+    void release (){
+
+    }
 }

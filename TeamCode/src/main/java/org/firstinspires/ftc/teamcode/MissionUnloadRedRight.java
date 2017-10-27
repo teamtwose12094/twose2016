@@ -12,6 +12,7 @@ public class MissionUnloadRedRight extends Autonomous {
         move(19, 0.7);
         pivot(90, 0.7);
         move(5, 0.7);
+        release();
     }
 
 }
