@@ -7,6 +7,7 @@ import com.qualcomm.robotcore.hardware.HardwareMap;
  */
 // test 2: test harder
 //TEST PLEASE
+    //this is a change
 @com.qualcomm.robotcore.eventloop.opmode.Autonomous(name = "MissionCornerBlue", group = "Autonomous")
 public class MissionCornerBlue extends Autonomous {
     @Override
@@ -18,6 +19,7 @@ public class MissionCornerBlue extends Autonomous {
         spin(3000, -0.7);
         move(4, 0.7);
         move(4, 0.7); //test
+        move(4, 0.7); //also test
     }
 
 }
