@@ -103,4 +103,8 @@ public abstract class Autonomous extends LinearOpMode {
     void release (){
 
     }
+
+    void moveColourSensor (int power){
+
+    }
 }
