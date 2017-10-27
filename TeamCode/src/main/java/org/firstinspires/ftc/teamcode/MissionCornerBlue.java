@@ -20,6 +20,7 @@ public class MissionCornerBlue extends Autonomous {
         move(4, 0.7);
         move(4, 0.7); //test
         move(4, 0.7); //also test
+        //test 1
     }
 
 }
