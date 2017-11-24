@@ -31,6 +31,8 @@ public class HardwareK9bot
     public DcMotor  fingerMotor = null;
     public Servo    arm         = null;
     public Servo    claw        = null;
+    public Servo    lobster     = null;
+    public Servo    colourStick = null;
 
     public final static double ARM_HOME = 0.2;
     public final static double CLAW_HOME = 0.2;
@@ -68,10 +70,13 @@ public class HardwareK9bot
         rightMotor.setMode(DcMotor.RunMode.RUN_WITHOUT_ENCODER);
 
         // Define and initialize ALL installed servos.
-//        arm = hwMap.servo.get("arm");
-//        claw = hwMap.servo.get("claw");
-//        arm.setPosition(ARM_HOME);
-//        claw.setPosition(CLAW_HOME);
+        arm = hwMap.servo.get("arm");
+        claw = hwMap.servo.get("claw");
+        lobster = hwMap.servo.get("lobster");
+        colourStick = hwMap.servo.get("colourStick");
+
+        arm.setPosition(ARM_HOME);
+        claw.setPosition(CLAW_HOME);
     }
 
     /***

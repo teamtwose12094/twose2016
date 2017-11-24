@@ -6,6 +6,8 @@ import com.qualcomm.robotcore.util.ElapsedTime;
 
 import java.util.HashMap;
 
+import static android.R.attr.duration;
+
 /**
  * Created by student on 11/24/2016.
  */
@@ -102,6 +104,8 @@ public abstract class Autonomous extends LinearOpMode {
     }
 
     void release (){
+        //gives power to motors
+        robot.lobster.setPosition(90);
 
     }
 

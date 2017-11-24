@@ -84,7 +84,7 @@ public abstract class MissionUnloadBlueLeft extends Autonomous implements ColorS
 
             }
         };
-        if (ColourSensor.blue() > 100) {
+        if (ColourSensor.blue() > 80) {
             pivot(90, 0.7);
         }
         pivot(90, 0.7);
