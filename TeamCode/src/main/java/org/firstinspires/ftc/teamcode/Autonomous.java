@@ -2,16 +2,19 @@ package org.firstinspires.ftc.teamcode;
 
 import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
 import com.qualcomm.robotcore.hardware.DcMotor;
+import com.qualcomm.robotcore.hardware.HardwareDevice;
+import com.qualcomm.robotcore.hardware.I2cAddr;
 import com.qualcomm.robotcore.util.ElapsedTime;
 
 import java.util.HashMap;
+import com.qualcomm.robotcore.hardware.ColorSensor;
 
 import static android.R.attr.duration;
 
 /**
  * Created by student on 11/24/2016.
  */
-//comment/*
+//comment/
 
 public abstract class Autonomous extends LinearOpMode {
 
